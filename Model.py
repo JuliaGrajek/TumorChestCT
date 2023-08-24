@@ -1,4 +1,4 @@
-import tensorflow.keras as keras
+import tensorflow as tf
 import numpy as np
 
 
@@ -9,8 +9,10 @@ class ChestScanModel:
 
     '''
     def __init__(self):
-        self.model = keras.models.load_model('mymodel_xception2.keras', compile=False)
+        path = r'C:\Users\jgrajek\ChestCancer\my_model5_xception.keras'
+        self.model = tf.keras.models.load_model(path, compile=False)
         self.model.compile()
+
 
     def predict_diagnosis(self, img):
         classes = {0: 'adenocarcinoma', 1: 'large cell carcinoma', 2: 'normal', 3: 'squamous cell carcinoma'}

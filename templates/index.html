@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+
+    <title>Chest CT predictor</title>
+  </head>
+  <body>
+  <h1>Classificator of lung cancer types based on chest CT scans. </h1>
+  Please upload a CT scan of the lung. The resulting classes might be:
+  <ul>
+    <li>adenocarcinoma</li>
+    <li>large cell carcinoma</li>
+    <li>squamous cell carcinoma</li>
+    <li>normal (tumor-free)</li>
+    </br>
+
+  </ul>
+
+    <form>
+        <input type="file" id="file-input" name ="image" accept=".jpg,.jpeg,.png">
+        <button type="submit" id="submit-button">Predict</button>
+    </form>
+    </br>
+
+
+    <div id="prediction"></div>
+    <script type="text/javascript" src="../static/script.js"></script>
+
+  </body>
+</html>
